@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{% url "results" %}" method="POST">
+        {% csrf_token %}
+        <label for="url">Enter url</label>
+        <input id="url" name="url" type="text">
+        <button type="submit">Enter</button>
+    </from>
+    
+{% endblock %}

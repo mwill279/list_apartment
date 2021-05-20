@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>{{name}}</h1>
+    <h2>{{address}}</h2>
+    <h3><a href = '{{link}}'>Link to page<a></h3>
+
+    <h3>Studio plans</h3>
+    <ul>
+        {% for plans in studio %}
+            <li>{{plans}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>1 bedroom plans</h3>
+    <ul>
+        {% for plans in 1_plan %}
+            <li>{{plans}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>2 bedroom plans</h3>
+    <ul>
+        {% for plans in 2_plan %}
+            <li>{{plans}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>3 bedroom plans</h3>
+    <ul>
+        {% for plans in 3_plan %}
+            <li>{{plans}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Community Features</h3>
+    <ul>
+        {% for feat in result_comm %}
+            <li>{{feat}}</li>
+        {% endfor %}
+    
+    </ul>
+    <h3>Unit Features</h3>
+    <ul>
+        {% for feat in result_unit %}
+            <li>{{feat}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>{{desc}}</h3>
+    
+{% endblock %}
